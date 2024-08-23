@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Ezequiel Genem</title>
+    <link rel="icon" href="Recursos/UTN_logo.jpg" type="image/jpg" />
+    <style>
+      body {
+        background-color: rgb(77, 77, 77);
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #7e0000;
+        margin: auto;
+        width: 100%;
+      }
+
+      .nav-link {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        width: 10%;
+        height: 40px;
+        margin: auto;
+        padding: 10px 0px;
+      }
+
+      .nav-link:hover {
+        background-color: #9e0000;
+        border-radius: 10px;
+      }
+
+      @media (max-width:960px) {
+        nav {
+            flex-direction: column;
+        }
+        
+        .nav-link{
+            width: 100%;
+            height: 25px;
+        }
+      }
+
+      main {
+        background-color: white;
+        width: 60%;
+        margin: 0px auto;
+        padding: 10px 0px;
+        border-radius: 10px;
+      }
+
+      @media (max-width:960px) {
+        main {
+            width: 100%;
+        }
+      }
+
+      section {
+        margin: 40px 20px;
+      }
+
+      .titles {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #000000;
+        border-color: #000000;
+        border-radius: 10px;
+        background-color: #cccccc;
+      }
+
+      @media (max-width:720px) {
+        .titles {
+            flex-direction: column;
+        }
+      }
+
+      aside {
+        background-color: #cccccc;
+        border: 1px solid #7e0000;
+        border-left: 10px solid #7e0000;
+        border-radius: 0px 10px 10px 0px;
+        width: 90%;
+        margin: auto;
+        padding: 5px;
+        font-style: italic;
+      }
+
+      .listas {
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      
+      .lista {      
+        text-align: center;
+        margin: auto;
+        width: 50%;      
+      }
+
+      .lista p {
+        padding-left: 5%;
+        text-align: left;
+      }
+
+      ul,
+      ol{
+        text-align: left;
+      }
+
+      .desordenada {
+        border-left: 1px solid black;
+      }
+
+      @media (max-width:720px) {
+        .listas {
+            flex-direction: column;
+        }
+
+        .desordenada {
+            border: none;
+        }
+      }
+
+      .multimedia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 10px;
+      }
+
+      .multimedias{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: ;
+        align-items: center;
+        background-color: #cccccc;
+        margin: 5px auto;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+      }
+
+      .multimedias img,
+      .multimedias video,
+      .multimedias audio{        
+        width: 90%;
+        border-radius: 5px;
+        padding-bottom: 5%;
+      }
+
+      @media (min-width:961px) {
+        .multimedia{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .multimedias{
+            width: 30%;
+            height: 100%;
+        }        
+      }
+
+      .tabla{
+        display: flex;
+        justify-content: space-around;
+      }
+      
+      table {
+        width: 80%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 5px 0px;
+      }
+
+      tfoot {
+        font-weight: bold;
+      }
+
+      
+      .input-form {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+
+      .button-form{
+        border: none;
+        border-radius: 3px;
+        margin: auto;
+        padding: 5px;
+        background-color: #7e0000;
+        color: white;
+        font-size: large;        
+      }
+
+      .button-form:hover {
+        background-color: #9e0000;
+      }
+
+      @media (max-width:960px) {
+        .input-form {
+            flex-direction: column;
+        }
+        .campos {
+            margin: 10px 0px;
+            display: flex;
+            justify-content: flex-start;
+        }
+      }
+
+      .texto-decoraciones {
+        margin-left: 20px;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        margin: auto;
+      }
+
+      .footer-texto{
+        color: white;
+        font-size: small;
+      }
+
+      @media (max-width:960px){
+        footer {
+            width: 100%;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>DOCUMENTO HTML</h1>
+    </header>
+
+    <nav>
+      <a href="https://frm.utn.edu.ar" class="nav-link">FRM UTN</a>
+      <a href="#primera-seccion" class="nav-link">Introducción</a>
+      <a href="#segunda-seccion" class="nav-link">Titulos</a>
+      <a href="#tercera-seccion" class="nav-link">Propiedades de Texto</a>
+      <a href="#cuarta-seccion" class="nav-link">Listas</a>
+      <a href="#quinta-seccion" class="nav-link">Multimedia</a>
+      <a href="#sexta-seccion" class="nav-link">Tablas</a>
+      <a href="#septima-seccion" class="nav-link">Formulario</a>
+    </nav>
+
+    <main>
+      <section id="primera-seccion">
+        <h2>1. Introducción</h2>
+        <article>
+          <p>
+            TP1 - Desarrollo de Software 2024 - Ezequiel Genem - Legajo: 42656 <br><br>            
+            Este documento HTML tiene una estructura básica que incluye la
+            declaración de DOCTYPE, etiquetas de metadatos y un título.
+          </p>
+        </article>
+        <h3>Titulo de la Página</h3>
+        <article>
+          <p>
+            Si prestamos atención al titulo de la pestaña que se encuentra en la
+            parte superior de nuestro navegador web, nos podremos encontrar con
+            el título de nuestra página la cual contiene el logo de la UTN
+            seguido por el texto
+            <em>"Página de Ezequiel Genem"</em>
+          </p>
+        </article>
+        <h3>Responsive</h3>
+        <article>
+          <p>
+            Se han realizado trabajos en el CSS para que esta página sea responsive y se ajuste a los distintos tamaños de pantallas. <br>
+            Para comprobar esto, podemos ir a la consola de nuestro navegador e ir al icono de <em>"Device Toolbar"</em> <img alt="toolbar-icon" src="Recursos/toolbarIcon.jpg">.<br><br>
+            Luego podemos ir cambiando la resolución de nuestra pantalla y ver como cambia la estructura de la página dependiendo de esta.
+          </p>
+        </article>
+      </section>
+
+      <section id="segunda-seccion">
+        <h2>2. Uso de títulos</h2>
+        <p>
+          En este apartado podremos ver los titulos que se pueden utilizar en
+          HTML.
+        </p>
+        <div class="titles">
+          <h2>Titulo H2</h2>
+          <h3>Titulo H3</h3>
+          <h4>Titulo H4</h4>
+          <h5>Titulo H5</h5>
+          <h6>Titulo H6</h6>
+        </div>
+      </section>
+
+      <section id="tercera-seccion">
+        <h2>3. Propiedades del Texto</h2>
+        <p>En este apartado vamos a mostrar las propiedades de texto. <br /></p>
+        <div class="texto-decoraciones">
+          <p>
+            <b>1. Este es un texto en negrita</b><br />
+            <em>2. Este es un texto en cursiva</em><br />
+            <u>3. Este es un texto subrayado</u><br />
+            <mark>4. Este es un texto resaltado</mark>
+          </p>
+        </div>
+        <aside>
+          <h3>Curiosidades: Lorem ipsum</h3>
+          <p>
+            Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
+            en demostraciones de tipografías o de borradores de diseño para
+            probar el diseño visual antes de insertar el texto final. Aunque no
+            posee actualmente fuentes para justificar sus hipótesis, el profesor
+            de filología clásica Richard McClintock asegura que su uso se
+            remonta a los impresores de comienzos del siglo XVI.1​ Su uso en
+            algunos editores de texto muy conocidos en la actualidad ha dado al
+            texto lorem ipsum nueva popularidad. El texto en sí no tiene sentido
+            aparente, aunque no es aleatorio, sino que deriva de un texto de
+            Cicerón en lengua latina, a cuyas palabras se les han eliminado
+            sílabas o letras. El significado del mismo no tiene importancia, ya
+            que solo es una demostración o prueba. asperiores?
+          </p>
+        </aside>
+      </section>
+
+      <section id="cuarta-seccion">
+        <h2>4. Divisiones y Listas</h2>
+        <div class="listas">
+          <div class="lista ordenada">
+            <h3>Listas ordenadas</h3>
+            <p>La siguiente es una lista ordenada:</p>
+            <ol>
+              <li>Primer elemento de la lista</li>
+              <li>Segundo elemento de la lista</li>
+              <li>Tercer elemento de la lista</li>
+              <li>Cuarto elemento de la lista</li>
+            </ol>
+          </div>
+          <div class="lista desordenada">
+            <h3>Listas desordenadas</h3>
+            <p>La siguiente es una lista desordenada:</p>
+            <ul>
+              <li>Primer elemento de la lista</li>
+              <li>Segundo elemento de la lista</li>
+              <li>Tercer elemento de la lista</li>
+              <li>Cuarto elemento de la lista</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="quinta-seccion">
+        <h2>5. Elementos multimedia</h2>
+        <p>En este apartado podremos ver algunos <b>elementos multimedia</b>.</p>
+        <div class="multimedia">
+          <div class="multimedias">
+            <h4>Imagen</h4>
+            <img
+              src="https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen-930x487.jpg"
+              alt="Imagen de Mario Bros"
+            />
+          </div>
+          <div class="multimedias">
+            <h4>Video</h4>
+            <video
+              src="https://video-previews.elements.envatousercontent.com/5b3b6876-9689-4cfe-9692-1cf061a156f6/watermarked_preview/watermarked_preview.mp4"
+              controls
+              width="310px"
+            />
+          </div>
+          <div class="multimedias">
+            <h4>Audio</h4>
+            <audio
+              src="https://download.blender.org/peach/trailer/trailer_1080p.ogg"
+              controls
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="sexta-seccion">
+        <h2>6. Tablas</h2>
+        <p>En este apartado podremos ver una <b>tabla</b></p>
+        <div class="tabla">
+          <table>
+            <thead>
+              <tr>
+                <th>Columna 1</th>
+                <th>Columna 2</th>
+                <th>Columna 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fila 1, Celda 1</td>
+                <td>Fila 1, Celda 2</td>
+                <td>Fila 1, Celda 3</td>
+              </tr>
+              <tr>
+                <td>Fila 2, Celda 1</td>
+                <td>Fila 2, Celda 2</td>
+                <td>Fila 2, Celda 3</td>
+              </tr>
+              <tr>
+                <td>Fila 3, Celda 1</td>
+                <td>Fila 3, Celda 2</td>
+                <td>Fila 3, Celda 3</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>TOTAL 1</td>
+                <td>TOTAL 2</td>
+                <td>TOTAL 3</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <section id="septima-seccion">
+        <h2>7. Formulario</h2>
+        <p>Por favor complete los campos indicados a continuación</p>
+        <form>
+          <div class="input-form">
+            <div class="campos">
+              <label>Nombre y Apellido: </label>
+              <input type="text" placeholder="Nombre Completo" />
+            </div>
+            <div class="campos">
+              <label>Email: </label>
+              <input type="email" placeholder="email@example.com" />
+            </div>
+            <div class="campos">
+              <label>Mensaje: </label>
+              <textarea placeholder="Su mensaje..."></textarea>
+            </div>
+          </div>
+          <button class="button-form"type="submit">Enviar Formulario</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-texto"><p>Ezequiel Genem - 42656</p></div>
+      <div class="footer-texto"><p>ezequielgenem@outlook.com.ar</p></div>
+      <div class="footer-texto"><p>TP1 Desarrollo de Software 3K10</p></div>
+    </footer>
+  </body>
+</html>
